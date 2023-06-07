@@ -1,4 +1,4 @@
-package com.example.fartos;
+package com.example.fartos.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +11,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+
+import com.example.fartos.activity.MainGame;
+import com.example.fartos.R;
 
 public class Jugadores extends DialogFragment {
     String jugador1, jugador2, jugador3, jugador4, jugador5, jugador6;

@@ -1,16 +1,18 @@
-package com.example.fartos;
+package com.example.fartos.model;
 
 import java.util.*;
 
 public class Carta {
 
     public enum tipuscarta {
-        MOV_1(28), MOV_2(18), MOV_3(10),
-        TELEPORT(3), ZANCADILLA(4), PATADA(3),
-        HUNDIMIENTO(2), BROMA(2);
+        MOV_1(28), MOV_2(18), MOV_3(10), TELEPORT(3), ZANCADILLA(4), PATADA(3), HUNDIMIENTO(2),
+        BROMA(2);
 
         private int numCartes;
-        public int getNumCartes() { return numCartes; }
+
+        public int getNumCartes() {
+            return numCartes;
+        }
 
         tipuscarta(int numCartes) {
             this.numCartes = numCartes;
@@ -25,6 +27,7 @@ public class Carta {
     public int getNumero() {
         return numero;
     }
+
     public tipuscarta getEfecte() {
         return efecte;
     }
@@ -34,8 +37,6 @@ public class Carta {
         this.numero = numero;
         this.efecte = efecte;
     }
-
-
 
 
     @Override
@@ -69,13 +70,12 @@ public class Carta {
         List<Carta> result = new ArrayList<>();
         int numeroCarta = 1;
 
-        // Crea las cartes
         for (tipuscarta tipuscarta : tipuscarta.values()) {
-            for (int i = 0; i < tipuscarta.getNumCartes(); i++)
+            for (int i = 0; i < tipuscarta.getNumCartes(); i++) {
                 result.add(new Carta(numeroCarta++, tipuscarta));
+            }
         }
 
-        // Reordena las cartes
         Collections.shuffle(result);
 
         return result;

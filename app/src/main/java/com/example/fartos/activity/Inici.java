@@ -1,4 +1,4 @@
-package com.example.fartos;
+package com.example.fartos.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.example.fartos.R;
+import com.example.fartos.fragment.Jugadores;
 
 public class Inici extends AppCompatActivity {
 

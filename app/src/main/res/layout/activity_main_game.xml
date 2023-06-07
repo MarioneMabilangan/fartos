@@ -1,29 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainGame">
+    android:background="@drawable/fondo"
+    tools:context=".activity.MainGame">
 
-    <TextView
-        android:id="@+id/titulo"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnMostrarOcultarCartas"
+        android:layout_width="match_parent"
+        style="@style/MyButtonStyle"
+        android:layout_height="wrap_content"
+        android:textColor="#B1A59C"
+        android:text="OCULTAR CARTAS" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerIconosPlayer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#98FB98"
-        android:layout_marginTop="100px"
-        android:layout_centerHorizontal="true"
-        android:textSize="96px"
-        android:text="FartOS 2086" />
+        android:orientation="horizontal" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerCasillas"
+        android:layout_width="match_parent"
+        android:layout_height="520dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="2dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerCartas"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_marginTop="520dp" />
 
     <TextView
-        android:id="@+id/boardView"
-        android:layout_width="match_parent"
+        style="bold"
+        android:layout_marginTop="50dp"
+        android:id="@+id/turno"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:layout_marginTop="400px"
-        android:textSize="12sp"
-        android:text="no"/>
-
+        android:layout_gravity="center_horizontal"
+        android:text="Selecciona al jugador:"
+        android:textColor="@color/white"
+        android:textSize="34dp" />
 
 </RelativeLayout>

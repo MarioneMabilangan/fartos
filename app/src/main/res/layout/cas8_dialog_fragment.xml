@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        style="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:layout_gravity="center_horizontal"
+        android:text="Casella Especial: Pots decidir que el jugador seleccionat avanci 5 caselles o retrocedeixi 5 caselles."
+        android:textColor="@color/black"
+        android:textSize="36dp" />
+
+    <TextView
+        style="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Selecciona al jugador:"
+        android:textColor="@color/black"
+        android:textSize="34dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recylerPlayers8"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:orientation="horizontal" />
+
+</LinearLayout>
