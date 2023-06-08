@@ -64,20 +64,4 @@ public class Carta {
 
         return result.toString();
     }
-
-
-    public static List<Carta> generarBaralla() {
-        List<Carta> result = new ArrayList<>();
-        int numeroCarta = 1;
-
-        for (tipuscarta tipuscarta : tipuscarta.values()) {
-            for (int i = 0; i < tipuscarta.getNumCartes(); i++) {
-                result.add(new Carta(numeroCarta++, tipuscarta));
-            }
-        }
-
-        Collections.shuffle(result);
-
-        return result;
-    }
 }
