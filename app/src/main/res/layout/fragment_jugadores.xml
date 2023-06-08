@@ -6,147 +6,260 @@
     tools:context=".fragment.Jugadores"
     android:orientation="vertical">
 
-    <LinearLayout
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/local"
-            android:layout_width="31dp"
-            android:layout_height="match_parent"
-
-            android:src="@drawable/uno" />
-
-        <EditText
-            android:id="@+id/editTextGroupName"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Introdueix nom" />
+            android:orientation="vertical" >
 
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/local"
+                    android:layout_width="31dp"
+                    android:layout_height="match_parent"
 
-        <ImageView
-            android:id="@+id/dos"
-            android:layout_width="31dp"
-            android:layout_height="match_parent"
+                    android:src="@drawable/uno" />
 
-            android:src="@drawable/dos" />
+                <EditText
+                    android:id="@+id/editTextGroupName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Introdueix nom" />
 
-        <EditText
-            android:id="@+id/jugador2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Introdueix nom" />
+            </LinearLayout>
 
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/dos"
+                    android:layout_width="31dp"
+                    android:layout_height="match_parent"
 
-        <ImageView
-            android:id="@+id/tres"
-            android:layout_width="31dp"
-            android:layout_height="match_parent"
+                    android:src="@drawable/dos" />
 
-            android:src="@drawable/tres" />
+                <EditText
+                    android:id="@+id/jugador2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Introdueix nom" />
 
-        <EditText
-            android:id="@+id/jugador3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Introdueix nom" />
+            </LinearLayout>
 
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/tres"
+                    android:layout_width="31dp"
+                    android:layout_height="match_parent"
 
-        <ImageView
-            android:id="@+id/cuatro"
-            android:layout_width="31dp"
-            android:layout_height="match_parent"
+                    android:src="@drawable/tres" />
 
-            android:src="@drawable/cuatro" />
+                <EditText
+                    android:id="@+id/jugador3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Introdueix nom" />
 
-        <EditText
-            android:id="@+id/jugador4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Introdueix nom" />
+            </LinearLayout>
 
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/cinco"
-            android:layout_width="31dp"
-            android:layout_height="match_parent"
+                <ImageView
+                    android:id="@+id/cuatro"
+                    android:layout_width="31dp"
+                    android:layout_height="match_parent"
 
-            android:src="@drawable/cinco" />
+                    android:src="@drawable/cuatro" />
 
-        <EditText
-            android:id="@+id/jugador5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Introdueix nom" />
+                <EditText
+                    android:id="@+id/jugador4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Introdueix nom" />
 
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/seis"
-            android:layout_width="31dp"
-            android:layout_height="match_parent"
+                <ImageView
+                    android:id="@+id/cinco"
+                    android:layout_width="31dp"
+                    android:layout_height="match_parent"
 
-            android:src="@drawable/seis" />
+                    android:src="@drawable/cinco" />
 
-        <EditText
-            android:id="@+id/jugador6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Introdueix nom" />
+                <EditText
+                    android:id="@+id/jugador5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Introdueix nom" />
 
-    </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/seis"
+                    android:layout_width="31dp"
+                    android:layout_height="match_parent"
+
+                    android:src="@drawable/seis" />
+
+                <EditText
+                    android:id="@+id/jugador6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Introdueix nom" />
+
+            </LinearLayout>
 
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="30dp"
-        android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="30dp"
+                android:orientation="horizontal">
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button3"
-            style="@style/MyButtonStyle"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="30dp"
-            android:layout_marginBottom="30dp"
-            android:layout_weight="1"
-            android:text="Més jugadors?" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button3"
+                    style="@style/MyButtonStyle"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_weight="1"
+                    android:text="Més jugadors?" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/buttonGetAlumnos"
-            style="@style/MyButtonStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="Acceptar"
-            />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonGetAlumnos"
+                    style="@style/MyButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Acceptar"
+                    />
 
-    </LinearLayout>
+            </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/uno" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/wwicon" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/dos" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/viktor" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/tres" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/viicon" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/cuatro" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/jayceicon" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/cinco" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/sevikaicon" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/seis" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/jinxicon" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
 
 </LinearLayout>

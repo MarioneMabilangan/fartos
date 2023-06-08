@@ -1,7 +1,5 @@
 package com.example.fartos.model;
 
-import com.example.fartos.view.CartaView;
-
 import java.io.Serializable;
 import java.util.*;
 

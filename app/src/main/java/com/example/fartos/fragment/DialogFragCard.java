@@ -19,7 +19,7 @@ import com.example.fartos.interfac.SelectListenerJugador;
 import com.example.fartos.layout.ScaleCenterItemLayoutManager;
 import com.example.fartos.model.Casella;
 import com.example.fartos.model.Jugador;
-import com.example.fartos.view.CartaView;
+import com.example.fartos.model.CartaView;
 
 import java.util.ArrayList;
 import java.util.List;

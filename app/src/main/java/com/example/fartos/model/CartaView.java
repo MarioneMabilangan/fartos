@@ -1,4 +1,4 @@
-package com.example.fartos.view;
+package com.example.fartos.model;
 
 import java.io.Serializable;
 

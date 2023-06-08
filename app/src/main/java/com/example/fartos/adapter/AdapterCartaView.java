@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.fartos.R;
 import com.example.fartos.interfac.SelectListenerCarta;
-import com.example.fartos.view.CartaView;
+import com.example.fartos.model.CartaView;
 
 import java.util.List;
 
