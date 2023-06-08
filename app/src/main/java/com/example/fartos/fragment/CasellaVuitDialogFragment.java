@@ -21,7 +21,7 @@ import com.example.fartos.model.Jugador;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CartaOchoDialogFragment extends DialogFragment implements SelectListenerJugador {
+public class CasellaVuitDialogFragment extends DialogFragment implements SelectListenerJugador {
 
     List<Jugador> jugadors = new ArrayList<>();
     Jugador selectedJugador;

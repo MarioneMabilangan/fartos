@@ -16,7 +16,7 @@ import android.widget.Toast;
 import com.example.fartos.R;
 import com.example.fartos.adapter.AdapterCartaView;
 import com.example.fartos.adapter.AdapterCasella;
-import com.example.fartos.fragment.CartaOchoDialogFragment;
+import com.example.fartos.fragment.CasellaVuitDialogFragment;
 import com.example.fartos.fragment.DialogFragCard;
 import com.example.fartos.fragment.Youwin;
 import com.example.fartos.interfac.SelectListenerCarta;
@@ -338,7 +338,7 @@ public class MainGame extends AppCompatActivity implements SelectListenerCarta {
     }
 
     public void casella8(Jugador user) {
-        CartaOchoDialogFragment cartaOchoDialogFragment = new CartaOchoDialogFragment();
+        CasellaVuitDialogFragment cartaOchoDialogFragment = new CasellaVuitDialogFragment();
         Bundle bundle = new Bundle();
         bundle.putSerializable("user", user);
         bundle.putSerializable("jugadors", (Serializable) players);
@@ -363,10 +363,10 @@ public class MainGame extends AppCompatActivity implements SelectListenerCarta {
             Youwin cm = new Youwin();
 
             cm.show(manager, "MessageDialog");
-            Toast.makeText(this, "Guanyador " + jugador.getName() + "!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Guanyador " + jugador.getName() + "!", Toast.LENGTH_LONG).show();
         }
         if (players.size() == 1) {
-            Toast.makeText(this, "Guanyador " + players.get(currentPlayerIndex).getName() + "!", Toast.LENGTH_SHORT)
+            Toast.makeText(this, "Guanyador " + players.get(currentPlayerIndex).getName() + "!", Toast.LENGTH_LONG)
                     .show();
         }
     }
