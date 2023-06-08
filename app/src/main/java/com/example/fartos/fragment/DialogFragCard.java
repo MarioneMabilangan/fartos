@@ -30,9 +30,9 @@ public class DialogFragCard extends DialogFragment implements SelectListenerJuga
     RecyclerView recyclerView;
     AdapterJugadorButton adapterJugadorButton;
     List<Jugador> jugadors = new ArrayList<>();
-    List<Casella> casillas = new ArrayList<>();
+    List<Casella> casellas = new ArrayList<>();
     Jugador user;
-    Casella lastCasilla;
+    Casella lastCasella;
     boolean isUser = false;
     boolean first8 = true;
     boolean broma = false;
@@ -47,7 +47,7 @@ public class DialogFragCard extends DialogFragment implements SelectListenerJuga
         Bundle bundle = getArguments();
         cartaView = (CartaView) bundle.getSerializable("carta");
         jugadors = (List<Jugador>) bundle.getSerializable("jugadors");
-        casillas = (List<Casella>) bundle.getSerializable("casillas");
+        casellas = (List<Casella>) bundle.getSerializable("casellas");
         user = (Jugador) bundle.getSerializable("user");
 
 
@@ -104,9 +104,9 @@ public class DialogFragCard extends DialogFragment implements SelectListenerJuga
                 break;
         }
 
-        if (selectedJugador.getNumCasilla() == 7 && first8) {
+        if (selectedJugador.getNumCasella() == 7 && first8) {
             first8 = false;
-            ((MainGame) getActivity()).casilla8(user);
+            ((MainGame) getActivity()).casella8(user);
         }
 
         int posTrob = -1;
@@ -122,10 +122,10 @@ public class DialogFragCard extends DialogFragment implements SelectListenerJuga
             broma = false;
         }
 
-        lastCasilla = casillas.get(casillas.size() - 1);
-        if (user.getCartasMano().size() > 0 && lastCasilla.getRonda() >= 3) {
-            lastCasilla.setRonda(lastCasilla.getRonda() + 1);
-            ((MainGame) getActivity()).deleteCasilla();
+        lastCasella = casellas.get(casellas.size() - 1);
+        if (user.getCartasMano().size() > 0 && lastCasella.getRonda() >= 3) {
+            lastCasella.setRonda(lastCasella.getRonda() + 1);
+            ((MainGame) getActivity()).deleteCasella();
             init();
         }
 

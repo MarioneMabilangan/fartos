@@ -34,13 +34,13 @@ public class MainGame extends AppCompatActivity implements SelectListenerCarta {
 
     String nom1, nom2, nom3, nom4, nom5, nom6;
     int contador;
-    private static final List<Casella> CASILLAS = new ArrayList<>();
+    private static final List<Casella> CASELLAS = new ArrayList<>();
     private final List<Jugador> players = new ArrayList<>();
-    private Casella casillaFinal;
+    private Casella casellaFinal;
     private List<CartaView> baralla = new ArrayList<>();
     private AdapterCasella adapterCasella;
     private RecyclerView cartaRV;
-    private RecyclerView casillaRV;
+    private RecyclerView casellaRV;
     private Jugador user;
     private int backgroundTransparent;
     private int currentPlayerIndex = 0;
@@ -140,11 +140,11 @@ public class MainGame extends AppCompatActivity implements SelectListenerCarta {
         if (cartaEnMano.isEmpty()) {
             cartaRV.setVisibility(View.GONE);
             String toastMessage = "T'has quedat sense cartes a la baralla";
-            if (casillaFinal.getRonda() == 3) {
-                toastMessage += "\nRonda finalitzada " + casillaFinal.getRonda();
+            if (casellaFinal.getRonda() == 3) {
+                toastMessage += "\nRonda finalitzada " + casellaFinal.getRonda();
             } else {
-                toastMessage += "\nNova ronda! " + (casillaFinal.getRonda() + 1);
-                casillaFinal.setRonda(casillaFinal.getRonda() + 1);
+                toastMessage += "\nNova ronda! " + (casellaFinal.getRonda() + 1);
+                casellaFinal.setRonda(casellaFinal.getRonda() + 1);
                 initBaraja();
                 shuffleCartas();
             }
@@ -162,11 +162,11 @@ public class MainGame extends AppCompatActivity implements SelectListenerCarta {
         }
     }
 
-    public void recyclerCasillas() {
-        adapterCasella = new AdapterCasella(CASILLAS);
-        casillaRV.setHasFixedSize(true);
-        casillaRV.setLayoutManager(new LinearLayoutManager(this));
-        casillaRV.setAdapter(adapterCasella);
+    public void recyclerCasellas() {
+        adapterCasella = new AdapterCasella(CASELLAS);
+        casellaRV.setHasFixedSize(true);
+        casellaRV.setLayoutManager(new LinearLayoutManager(this));
+        casellaRV.setAdapter(adapterCasella);
     }
 
     public void initBaraja() {
@@ -189,24 +189,24 @@ public class MainGame extends AppCompatActivity implements SelectListenerCarta {
     }
 
     public void initMap() {
-        casillaRV = findViewById(R.id.recyclerCasillas);
+        casellaRV = findViewById(R.id.recyclerCasellas);
         for (int i = 0; i < 16; i++) {
-            CASILLAS.add(new Casella(String.valueOf(i), i, backgroundTransparent, backgroundTransparent));
+            CASELLAS.add(new Casella(String.valueOf(i), i, backgroundTransparent, backgroundTransparent));
         }
-        casillaFinal = CASILLAS.get(CASILLAS.size() - 1);
-        recyclerCasillas();
+        casellaFinal = CASELLAS.get(CASELLAS.size() - 1);
+        recyclerCasellas();
 
         move(players.get(2), 0);
         move(players.get(0), 1);
         move(players.get(1), 0);
     }
     public void initMap4() {
-        casillaRV = findViewById(R.id.recyclerCasillas);
+        casellaRV = findViewById(R.id.recyclerCasellas);
         for (int i = 0; i < 16; i++) {
-            CASILLAS.add(new Casella(String.valueOf(i), i, backgroundTransparent, backgroundTransparent));
+            CASELLAS.add(new Casella(String.valueOf(i), i, backgroundTransparent, backgroundTransparent));
         }
-        casillaFinal = CASILLAS.get(CASILLAS.size() - 1);
-        recyclerCasillas();
+        casellaFinal = CASELLAS.get(CASELLAS.size() - 1);
+        recyclerCasellas();
 
         move(players.get(2), 0);
         move(players.get(0), 1);
@@ -214,12 +214,12 @@ public class MainGame extends AppCompatActivity implements SelectListenerCarta {
         move(players.get(3), 1);
     }
     public void initMap5() {
-        casillaRV = findViewById(R.id.recyclerCasillas);
+        casellaRV = findViewById(R.id.recyclerCasellas);
         for (int i = 0; i < 16; i++) {
-            CASILLAS.add(new Casella(String.valueOf(i), i, backgroundTransparent, backgroundTransparent));
+            CASELLAS.add(new Casella(String.valueOf(i), i, backgroundTransparent, backgroundTransparent));
         }
-        casillaFinal = CASILLAS.get(CASILLAS.size() - 1);
-        recyclerCasillas();
+        casellaFinal = CASELLAS.get(CASELLAS.size() - 1);
+        recyclerCasellas();
 
         move(players.get(2), 0);
         move(players.get(0), 1);
@@ -228,12 +228,12 @@ public class MainGame extends AppCompatActivity implements SelectListenerCarta {
         move(players.get(4), 2);
     }
     public void initMap6() {
-        casillaRV = findViewById(R.id.recyclerCasillas);
+        casellaRV = findViewById(R.id.recyclerCasellas);
         for (int i = 0; i < 16; i++) {
-            CASILLAS.add(new Casella(String.valueOf(i), i, backgroundTransparent, backgroundTransparent));
+            CASELLAS.add(new Casella(String.valueOf(i), i, backgroundTransparent, backgroundTransparent));
         }
-        casillaFinal = CASILLAS.get(CASILLAS.size() - 1);
-        recyclerCasillas();
+        casellaFinal = CASELLAS.get(CASELLAS.size() - 1);
+        recyclerCasellas();
 
         move(players.get(2), 0);
         move(players.get(0), 1);
@@ -244,59 +244,59 @@ public class MainGame extends AppCompatActivity implements SelectListenerCarta {
     }
 
     public void move(Jugador jugador, int move) {
-        int nCasilla1 = Math.max(jugador.getNumCasilla(), 0);
-        int nCasilla2 = nCasilla1 + move;
-        if (nCasilla2 <= 0) {
-            nCasilla2 = 0;
+        int nCasella1 = Math.max(jugador.getNumCasella(), 0);
+        int nCasella2 = nCasella1 + move;
+        if (nCasella2 <= 0) {
+            nCasella2 = 0;
         }
-        if (nCasilla2 >= CASILLAS.size() - 1) {
-            nCasilla2 = CASILLAS.size() - 1;
+        if (nCasella2 >= CASELLAS.size() - 1) {
+            nCasella2 = CASELLAS.size() - 1;
         }
-        jugador.setNumCasilla(nCasilla2);
+        jugador.setNumCasella(nCasella2);
 
-        if (CASILLAS.get(nCasilla2).getP1() == backgroundTransparent) {
+        if (CASELLAS.get(nCasella2).getP1() == backgroundTransparent) {
             if (jugador.isPlayer()) {
-                CASILLAS.get(nCasilla1).setP1(backgroundTransparent);
+                CASELLAS.get(nCasella1).setP1(backgroundTransparent);
             } else {
-                CASILLAS.get(nCasilla1).setP2(backgroundTransparent);
+                CASELLAS.get(nCasella1).setP2(backgroundTransparent);
             }
-            CASILLAS.get(nCasilla2).setP1(jugador.getSprite());
+            CASELLAS.get(nCasella2).setP1(jugador.getSprite());
             jugador.setPlayer(true);
-        } else if (CASILLAS.get(nCasilla2).getP2() == backgroundTransparent) {
+        } else if (CASELLAS.get(nCasella2).getP2() == backgroundTransparent) {
             if (jugador.isPlayer()) {
-                CASILLAS.get(nCasilla1).setP1(backgroundTransparent);
+                CASELLAS.get(nCasella1).setP1(backgroundTransparent);
             } else {
-                CASILLAS.get(nCasilla1).setP2(backgroundTransparent);
+                CASELLAS.get(nCasella1).setP2(backgroundTransparent);
             }
-            CASILLAS.get(nCasilla2).setP2(jugador.getSprite());
+            CASELLAS.get(nCasella2).setP2(jugador.getSprite());
             jugador.setPlayer(false);
         }
 
-        casillaRV.setAdapter(adapterCasella);
+        casellaRV.setAdapter(adapterCasella);
     }
 
     public void teleport(Jugador user, Jugador selectedJugador) {
-        int casillaUser = user.getNumCasilla();
+        int casellaUser = user.getNumCasella();
         boolean pUser = user.isPlayer();
-        int casillaSelectedJugador = selectedJugador.getNumCasilla();
+        int casellaSelectedJugador = selectedJugador.getNumCasella();
         boolean pSelectedJugador = selectedJugador.isPlayer();
-        user.setNumCasilla(casillaSelectedJugador);
+        user.setNumCasella(casellaSelectedJugador);
         user.setPlayer(pSelectedJugador);
-        selectedJugador.setNumCasilla(casillaUser);
+        selectedJugador.setNumCasella(casellaUser);
         selectedJugador.setPlayer(pUser);
 
         if (user.isPlayer()) {
-            CASILLAS.get(user.getNumCasilla()).setP1(user.getSprite());
+            CASELLAS.get(user.getNumCasella()).setP1(user.getSprite());
         } else {
-            CASILLAS.get(user.getNumCasilla()).setP2(user.getSprite());
+            CASELLAS.get(user.getNumCasella()).setP2(user.getSprite());
         }
         if (selectedJugador.isPlayer()) {
-            CASILLAS.get(selectedJugador.getNumCasilla()).setP1(backgroundTransparent);
-            CASILLAS.get(selectedJugador.getNumCasilla()).setP1(selectedJugador.getSprite());
+            CASELLAS.get(selectedJugador.getNumCasella()).setP1(backgroundTransparent);
+            CASELLAS.get(selectedJugador.getNumCasella()).setP1(selectedJugador.getSprite());
         } else {
-            CASILLAS.get(selectedJugador.getNumCasilla()).setP2(selectedJugador.getSprite());
+            CASELLAS.get(selectedJugador.getNumCasella()).setP2(selectedJugador.getSprite());
         }
-        recyclerCasillas();
+        recyclerCasellas();
     }
 
     public void zancadilla(Jugador jugador) {
@@ -310,7 +310,7 @@ public class MainGame extends AppCompatActivity implements SelectListenerCarta {
 
 
     public void hundimiento(Jugador jugador) {
-        int move = jugador.getNumCasilla();
+        int move = jugador.getNumCasella();
         move(jugador, -move);
     }
 
@@ -337,28 +337,28 @@ public class MainGame extends AppCompatActivity implements SelectListenerCarta {
         recyclerBaraja();
     }
 
-    public void casilla8(Jugador user) {
+    public void casella8(Jugador user) {
         CartaOchoDialogFragment cartaOchoDialogFragment = new CartaOchoDialogFragment();
         Bundle bundle = new Bundle();
         bundle.putSerializable("user", user);
         bundle.putSerializable("jugadors", (Serializable) players);
         cartaOchoDialogFragment.setArguments(bundle);
-        cartaOchoDialogFragment.show(getSupportFragmentManager(), "Casilla 8 Fragment");
+        cartaOchoDialogFragment.show(getSupportFragmentManager(), "Casella 8 Fragment");
     }
 
-    public void deleteCasilla() {
+    public void deleteCasella() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            players.removeIf(jugador -> jugador.getNumCasilla() == 0);
+            players.removeIf(jugador -> jugador.getNumCasella() == 0);
         }
         for (Jugador jugador : players) {
-            jugador.setNumCasilla(jugador.getNumCasilla() - 1);
+            jugador.setNumCasella(jugador.getNumCasella() - 1);
         }
-        CASILLAS.remove(0);
+        CASELLAS.remove(0);
 
     }
 
     public void checkWin(Jugador jugador) {
-        if (jugador.getNumCasilla() == CASILLAS.size() - 1) {
+        if (jugador.getNumCasella() == CASELLAS.size() - 1) {
             FragmentManager manager = getSupportFragmentManager();
             Youwin cm = new Youwin();
 
@@ -381,7 +381,7 @@ public class MainGame extends AppCompatActivity implements SelectListenerCarta {
         bundle.putSerializable("carta", cartaSeleccionada);
         bundle.putSerializable("jugadors", (Serializable) players);
         bundle.putSerializable("user", jugador);
-        bundle.putSerializable("casillas", (Serializable) CASILLAS);
+        bundle.putSerializable("casellas", (Serializable) CASELLAS);
         dialogFragCard.setArguments(bundle);
         dialogFragCard.show(getSupportFragmentManager(), "Carta Fragment");
         currentPlayerIndex++;

@@ -11,7 +11,7 @@ public class Jugador implements Serializable {
     private boolean zancadilla = false;
     private int sprite;
     private int icon;
-    private int numCasilla = -1;
+    private int numCasella = -1;
     private boolean isPlayer;
 
     public Jugador(String name, int sprite, int icon) {
@@ -28,12 +28,12 @@ public class Jugador implements Serializable {
         this.cartasMano = cartasMano;
     }
 
-    public int getNumCasilla() {
-        return numCasilla;
+    public int getNumCasella() {
+        return numCasella;
     }
 
-    public void setNumCasilla(int numCasilla) {
-        this.numCasilla = numCasilla;
+    public void setNumCasella(int numCasella) {
+        this.numCasella = numCasella;
     }
 
     public boolean isPlayer() {

@@ -49,7 +49,7 @@ public class AdapterCasella extends RecyclerView.Adapter<AdapterCasella.MyViewHo
             super(itemView);
             spriteP1 = itemView.findViewById(R.id.p1);
             spriteP2 = itemView.findViewById(R.id.p2);
-            txtCasella = itemView.findViewById(R.id.casillaN);
+            txtCasella = itemView.findViewById(R.id.casellaN);
 
         }
 
